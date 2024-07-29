@@ -1,0 +1,18 @@
+<input type="text" id="one" onkeyup="print1()">
+<button onclick="print1()">Print</button>
+<h1 id="two"></h1>
+<script>
+    var a=document.getElementById("one")
+    var b=document.getElementById("two")
+    function print1(){
+        b.textContent= a.value
+    }
+</script>
+
+<button  id="change" onclick="change1()">Change color</button>
+<script>
+    function change1(){
+        var m=document.getElementById("change")
+        m.style.backgroundColor="red"
+    }
+</script>

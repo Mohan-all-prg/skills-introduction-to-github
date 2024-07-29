@@ -1,0 +1,28 @@
+<style>
+       div{
+        background-color: brown;
+        width:200px;
+        height:200px;
+        border: 20px;
+        border-color: white;
+        border-style: solid;
+        transition: 10s;
+       }
+       .text{
+           width: 1000px;
+           height: 1000px;
+       }
+       h1{
+        color: white;
+       }
+</style>
+
+<div id="one"><h1>Mohan kumar</h1></div>
+<button onclick="change()">Change</button>
+<script>
+    var a=document.getElementById("one")
+    function change(){
+        a.style.backgroundColor="black"
+        a.setAttribute("class","text")         //we can use setattribute here to mention class or to call a class while clicking the button 
+    }
+</script>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        td, th {
+            border: 2px solid black;
+            padding: 8px;
+        }
+        .a {
+            width: 178px;
+        }
+        .b {
+            border: none;
+        }
+        .c {
+            width: 200px;
+            text-align: center;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>STUDENT FORM</h1>
+        <form id="studentForm">
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type="text" id="name" required></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td><input type="number" id="age" required></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" value="Male" id="male"><label for="male">Male</label>
+                        <input type="radio" name="gender" value="Female" id="female"><label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>
+                        <select style="width:178px;" id="course" required>
+                            <option value="Java">Java</option>
+                            <option value="Python">Python</option>
+                            <option value="HTML">HTML</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>E-mail</td>
+                    <td><input type="email" id="email" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="b">
+                        <button type="button" class="a" onclick="result()">Save</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+        <h2>Student List</h2>
+        <table id="get">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Course</th>
+                    <th>Gender</th>
+                    <th class="c">E-mail</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </center>
+
+    <script>
+        function result() {
+            var name = document.getElementById("name").value;
+            var age = document.getElementById("age").value;
+            var gender = document.querySelector('input[name="gender"]:checked')?.value || '';
+            var course = document.getElementById("course").value;
+            var email = document.getElementById("email").value;
+
+            var tr = document.createElement("tr");
+
+            var td1 = document.createElement("td");
+            td1.textContent = name;
+            tr.appendChild(td1);
+
+            var td2 = document.createElement("td");
+            td2.textContent = age;
+            tr.appendChild(td2);
+
+            var td3 = document.createElement("td");
+            td3.textContent = course;
+            tr.appendChild(td3);
+
+            var td4 = document.createElement("td");
+            td4.textContent = gender;
+            tr.appendChild(td4);
+
+            var td5 = document.createElement("td");
+            td5.textContent = email;
+            tr.appendChild(td5);
+
+            var td6 = document.createElement("td");
+            var deleteButton = document.createElement("button");
+            deleteButton.textContent = "Delete";
+            deleteButton.onclick = function() {
+                tr.remove();
+            };
+            td6.appendChild(deleteButton);
+            tr.appendChild(td6);
+
+            document.querySelector("#get tbody").appendChild(tr);
+
+            // Clear form after saving
+            document.getElementById("studentForm").reset();
+        }
+    </script>
+</body>
+</html>

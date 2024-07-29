@@ -1,0 +1,32 @@
+table {
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+  }
+
+  td,
+  tr {
+    border: 2px;
+    border-color: black;
+    border-style: solid;
+    width: 5px;
+  }
+
+  .a {
+    width: 178px;
+  }
+
+  .b {
+    border: 0px;
+  }
+
+  .c {
+    width: 200px;
+    text-align: center;
+  }
+
+  td,
+  th {
+    border: 2px solid black;
+    padding: 8px;
+  }

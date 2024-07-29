@@ -1,0 +1,40 @@
+<h1 id="one">Mohan</h1>
+<script>
+    var a=document.getElementById("one")
+    a.textContent="Kumar"
+</script>
+
+<h1 id="two">Mohan Kumar</h1>
+<button onclick= "convert()">Change</button>
+<script>
+    var b=document.getElementById("two")
+    function convert()
+    {
+        b.textContent="Good man"
+    }
+</script>
+
+<input id="n1">
+<input id="n2">
+<button onclick="result()">Total</button>
+<p id="n3">Result</p>
+<script>
+    function result() {
+        var c = document.getElementById("n1").value
+        var d = document.getElementById("n2").value
+        var f = Number(c)
+        var g = Number(d)
+        var h = f + g
+        var e = document.getElementById("n3")
+        e.textContent = h
+    }
+</script>
+
+
+<div id="mo">
+    <h1>Mohan</h1>
+</div>
+<script>
+    var a=document.getElementById("mo")
+    a.innerHTML="<h1>Mohan Kumar</h1>"
+</script>

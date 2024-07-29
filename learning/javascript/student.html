@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Form</title>
+  <a href="C:\Users\mohan\Desktop\javascript\selector.html">Mohan</a>
+  <link rel="stylesheet" href="student.css">
+  <script src="student.js"></script>
+</head>
+
+<body>
+  <center>
+    <h1>STUDENT FORM</h1>
+    <form>
+      <table>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td><input type="number" id="age"></td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>
+            <input type="radio" name="gender" id="male" value="Male"><label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="Female"><label for="female">Female</label>
+          </td>
+        </tr>
+        <tr>
+          <td>Course</td>
+          <td><select style="width:178px;" id="course">
+              <option>Java</option>
+              <option>Python</option>
+              <option>HTML</option>
+            </select></td>
+        </tr>
+        <tr>
+          <td>E-mail</td>
+          <td><input type="email" id="email"></td>
+        </tr>
+        <tr>
+          <td class="b"></td>
+          <td class="b"><button type="button" class="a" onclick="result();">Save</button></td>
+        </tr>
+      </table>
+    </form>
+  </center>
+  <center>
+    <h1>Student List</h1>
+    <form>
+      <table id="get">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Gender</th>
+            <th class="c">E-mail</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </form>
+  </center>
+</body>
+
+</html>
